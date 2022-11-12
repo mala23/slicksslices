@@ -1,12 +1,5 @@
 import React from 'react';
-import { Link, navigate } from 'gatsby';
-
-function goToSlicemasters() {
-  setTimeout(() => {
-    console.log('Go to slicers!');
-    navigate('/slicemasters'); 
-  }, 2000)
-}
+import { Link } from 'gatsby';
 
 export default function Nav() {
   return(
