@@ -18,7 +18,7 @@ export default function Nav() {
           <Link to="/slicemasters">Slice Masters</Link>
         </li>
         <li>
-          <button type="button" onClick={goToSlicemasters}>click me to see slicemasters after 2 seconds</button>
+          <Link to="/orders">Orders</Link>
         </li>
       </ul>
     </nav>
