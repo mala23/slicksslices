@@ -1,12 +1,13 @@
 import React from 'react';
 import Nav from './Nav';
 import Footer from './Footer';
+import 'normalize.css';
 
-export default function Layout() {
+export default function Layout({children}) {
   return (
     <>
       <Nav />
-      <p>I am the page content</p>
+      {children}
       <Footer />
     </>
   );
