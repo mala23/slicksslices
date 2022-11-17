@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
+		module.exports = factory(require("/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js", "/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js", "react", "react-dom/server"], factory);
+		define("lib", ["/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js", "/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js", "react", "react-dom/server"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
+		exports["lib"] = factory(require("/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
 	else
-		root["lib"] = factory(root["/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js"], root["/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js"], root["react"], root["react-dom/server"]);
+		root["lib"] = factory(root["/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js"], root["/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js"], root["react"], root["react-dom/server"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -30436,9 +30436,9 @@ function Nav() {
 /***/ }),
 
 /***/ "@reach/router":
-/*!*************************************************************************************************!*\
-  !*** external "/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js" ***!
-  \*************************************************************************************************/
+/*!************************************************************************************************!*\
+  !*** external "/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js" ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -30447,9 +30447,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__reach_router__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!******************************************************************************************!*\
-  !*** external "/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js" ***!
-  \******************************************************************************************/
+/*!*****************************************************************************************!*\
+  !*** external "/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js" ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
