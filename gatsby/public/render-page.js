@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
+		module.exports = factory(require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js", "/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js", "react", "react-dom/server"], factory);
+		define("lib", ["/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js", "/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js", "react", "react-dom/server"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
+		exports["lib"] = factory(require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
 	else
-		root["lib"] = factory(root["/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js"], root["/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js"], root["react"], root["react-dom/server"]);
+		root["lib"] = factory(root["/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js"], root["/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js"], root["react"], root["react-dom/server"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -31383,6 +31383,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Footer */ "./src/components/Footer.js");
 /* harmony import */ var _styles_GlobalStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/GlobalStyles */ "./src/styles/GlobalStyles.js");
 /* harmony import */ var _styles_Typography__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/Typography */ "./src/styles/Typography.js");
+/* harmony import */ var _assets_images_stripes_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/images/stripes.svg */ "./src/assets/images/stripes.svg");
+/* harmony import */ var _assets_images_stripes_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_images_stripes_svg__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -31393,6 +31396,17 @@ __webpack_require__.r(__webpack_exports__);
 const SiteBorderStyles = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   max-width: 1000px;
   margin: 12rem auto 4rem auto;
+  margin-top: clamp(2rem, 10vw, 12rem);
+  background: white url(${_assets_images_stripes_svg__WEBPACK_IMPORTED_MODULE_7___default.a});
+  background-size: 1600px;
+  padding: 5px;
+  padding: clamp(5px, 1vw, 25px);
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.044);
+  border: 5px solid white;
+  @media(max-width: 1100px) {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
 `;
 const ContentStyles = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   background: white;
@@ -31570,7 +31584,7 @@ const NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav`
   margin-bottom: 3rem;
 
   .logo {
-    transform: translateY(-25%);
+    transform: translateY(-50%);
   }
 
   ul {
@@ -31608,6 +31622,11 @@ const NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav`
     &:hover {
       color: var(--red);
     }
+    /*
+    &[aria-current='page'] {
+      color: var(--red);
+    }
+    */
   }
 `;
 function Nav() {
@@ -31768,9 +31787,9 @@ const Typography = styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalS
 /***/ }),
 
 /***/ "@reach/router":
-/*!************************************************************************************************!*\
-  !*** external "/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js" ***!
-  \************************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** external "/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js" ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -31779,9 +31798,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__reach_router__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!*****************************************************************************************!*\
-  !*** external "/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js" ***!
-  \*****************************************************************************************/
+/*!******************************************************************************************!*\
+  !*** external "/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js" ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

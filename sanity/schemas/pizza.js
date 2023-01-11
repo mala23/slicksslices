@@ -1,7 +1,10 @@
+
 import { MdLocalPizza as icon } from 'react-icons/md';
 
 export default {
+  // Computer Name
   name: 'pizza',
+  // visible title
   title: 'Pizzas',
   type: 'document',
   icon,
@@ -34,7 +37,14 @@ export default {
       title: 'Price',
       type: 'number',
       description: 'Price of the pizza in cents',
-      validation: Rule => Rule.min(1000).max(50000)
+      validation: Rule => Rule.min(1000),
+    },
+    {
+      name: 'toppings',
+      title: 'Toppings',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'topping' }] }],
+      // TODO: Add custom input component
     },
   ],
 };
