@@ -44,7 +44,6 @@ export default {
       title: 'Toppings',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'topping' }] }],
-      // TODO: Add custom input component
     },
   ],
   preview: {
