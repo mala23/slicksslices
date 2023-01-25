@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
+		module.exports = factory(require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js", "/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js", "react", "react-dom/server"], factory);
+		define("lib", ["/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js", "/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js", "react", "react-dom/server"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
+		exports["lib"] = factory(require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js"), require("/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
 	else
-		root["lib"] = factory(root["/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js"], root["/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js"], root["react"], root["react-dom/server"]);
+		root["lib"] = factory(root["/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js"], root["/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js"], root["react"], root["react-dom/server"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -104,6 +104,27 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 var plugins = [{
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-styled-components/gatsby-ssr */ "./node_modules/gatsby-plugin-styled-components/gatsby-ssr.js"),
+  options: {
+    "plugins": [],
+    "displayName": true,
+    "fileName": true,
+    "minify": true,
+    "namespace": "",
+    "transpileTemplateLiterals": true,
+    "pure": false
+  }
+}, {
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-source-sanity/gatsby-ssr */ "./node_modules/gatsby-source-sanity/gatsby-ssr.js"),
+  options: {
+    "plugins": [],
+    "projectId": "0kkqmo64",
+    "dataset": "production",
+    "watchMode": true,
+    "apiVersion": "2023-01-20",
+    "token": "skQziEeXGANjI76NhworFI2ZhX3yyAbanullSDbwGINZ7DL2Dh5TFIHXaNFTH1tebDelnyQdzzMA7FfouiqoOiaivaykQVivDoPydH9AIFQGR7T0QH9o26I3t0ngrxH4NFIJgnjSncTOAA1N9KaidN3sIPu30M5g3JSkRAdd2K6KEPEKVhqA"
+  }
+}, {
   plugin: __webpack_require__(/*! ./gatsby-ssr */ "./gatsby-ssr.js"),
   options: {
     "plugins": []
@@ -3117,6 +3138,42 @@ function parsePath(path) {
 
 /***/ }),
 
+/***/ "./node_modules/gatsby-plugin-styled-components/gatsby-ssr.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-styled-components/gatsby-ssr.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+var sheetByPathname = new Map(); // eslint-disable-next-line react/prop-types,react/display-name
+
+exports.wrapRootElement = function (_ref) {
+  var element = _ref.element,
+    pathname = _ref.pathname;
+  var sheet = new _styledComponents.ServerStyleSheet();
+  sheetByPathname.set(pathname, sheet);
+  return /*#__PURE__*/_react.default.createElement(_styledComponents.StyleSheetManager, {
+    sheet: sheet.instance
+  }, element);
+};
+exports.onRenderBody = function (_ref2) {
+  var setHeadComponents = _ref2.setHeadComponents,
+    pathname = _ref2.pathname;
+  var sheet = sheetByPathname.get(pathname);
+  if (sheet) {
+    setHeadComponents([sheet.getStyleElement()]);
+    sheetByPathname.delete(pathname);
+  }
+};
+
+/***/ }),
+
 /***/ "./node_modules/gatsby-react-router-scroll/index.js":
 /*!**********************************************************!*\
   !*** ./node_modules/gatsby-react-router-scroll/index.js ***!
@@ -3500,6 +3557,48 @@ function useScrollRestoration(identifier) {
     }
   };
 }
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-source-sanity/gatsby-ssr.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/gatsby-source-sanity/gatsby-ssr.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Proxy to TypeScript-compiled output.
+// Note that unlike gatsby-node.js, we need to explicitly define the exported hooks
+// as they seem to be statically analyzed at build time.
+const ssr = __webpack_require__(/*! ./lib/gatsby-ssr */ "./node_modules/gatsby-source-sanity/lib/gatsby-ssr.js");
+exports.onRenderBody = ssr.onRenderBody;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-source-sanity/lib/gatsby-ssr.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/gatsby-source-sanity/lib/gatsby-ssr.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.onRenderBody = void 0;
+const react_1 = __webpack_require__(/*! react */ "react");
+exports.onRenderBody = ({
+  setHeadComponents
+}) => {
+  setHeadComponents([react_1.createElement('link', {
+    rel: 'preconnect',
+    key: 'sanity-cdn-preconnect',
+    href: 'https://cdn.sanity.io'
+  })]);
+};
 
 /***/ }),
 
@@ -31393,25 +31492,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const SiteBorderStyles = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
-  max-width: 1000px;
-  margin: 12rem auto 4rem auto;
-  margin-top: clamp(2rem, 10vw, 12rem);
-  background: white url(${_assets_images_stripes_svg__WEBPACK_IMPORTED_MODULE_7___default.a});
-  background-size: 1600px;
-  padding: 5px;
-  padding: clamp(5px, 1vw, 25px);
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.044);
-  border: 5px solid white;
-  @media(max-width: 1100px) {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-`;
-const ContentStyles = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
-  background: white;
-  padding: 2rem;
-`;
+const SiteBorderStyles = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Layout__SiteBorderStyles"
+})(["max-width:1000px;margin:12rem auto 4rem auto;margin-top:clamp(2rem,10vw,12rem);background:white url(", ");background-size:1600px;padding:5px;padding:clamp(5px,1vw,25px);box-shadow:0 0 5px 3px rgba(0,0,0,0.044);border:5px solid white;@media(max-width:1100px){margin-left:1.5rem;margin-right:1.5rem;}"], _assets_images_stripes_svg__WEBPACK_IMPORTED_MODULE_7___default.a);
+const ContentStyles = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Layout__ContentStyles"
+})(["background:white;padding:2rem;"]);
 function Layout({
   children
 }) {
@@ -31438,99 +31524,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const LogoStyles = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
-  /* This value controls the entire size of the logo*/
-  font-size: clamp(1px, 0.65vw, 8px);
-  width: 30em;
-  height: 30em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  margin: 0;
-  --borderSize: 1em;
-  background: white url(${_assets_images_stripes_svg__WEBPACK_IMPORTED_MODULE_2___default.a});
-  background-size: 150em;
-  border: var(--borderSize) solid white;
-  display: flex;
-  .inner {
-    margin: var(--borderSize);
-    flex: 1;
-    background: white;
-    display: grid;
-    grid-template-rows: 20% 1fr 1fr;
-    align-content: center;
-  }
-  .est {
-    font-size: 1.5em;
-    align-self: center;
-  }
-  h1 {
-    display: grid;
-    grid-template-rows: 8fr 2fr;
-    align-items: center;
-    margin: 0;
-    grid-row: 2 / span 2;
-    grid-gap: 2em;
-    transform: translateY(-0.7em);
-  }
-  .slices {
-    font-size: 3.2em;
-    letter-spacing: 0.2em;
-    transform: translateY(-0.15em);
-  }
-  .slicks {
-    transform: scale(1.4);
-    display: block;
-    text-shadow: 0.18em 0.18em 0 rgba(0, 0, 0, 0.05);
-    perspective: 100px;
-  }
-  .letter {
-    font-size: 5em;
-    color: var(--red);
-    --scale: 1;
-    --rotate: -10deg;
-    --translateX: 0;
-    --translateY: 0;
-    --rotateX: 0deg;
-    transform: scale(var(--scale)) rotate(var(--rotate))
-      translateX(var(--translateX)) translateY(var(--translateY))
-      rotateX(var(--rotateX));
-    display: inline-block;
-    line-height: 1;
-    transition: transform 0.3s;
-    &.S {
-      --translateX: -0.05;
-    }
-    &.l {
-      --rotate: 2deg;
-      --scale: 1.4;
-      --translateX: 0.05em;
-      --translateY: -0.05em;
-    }
-    &.i {
-      --scale: 0.9;
-      --translateY: -0.1em;
-      --translateX: 0.1em;
-    }
-    &.c {
-      --rotate: 3deg;
-      --scale: 0.9;
-      --translateX: 0.1em;
-      --translateY: 0.23em;
-    }
-    &.k {
-      --rotate: -12deg;
-      --scale: 1.2;
-      --translateX: 0.06em;
-    }
-    &.apos {
-      --translateX: 0.1em;
-    }
-    &.s {
-      --rotate: 12deg;
-      --scale: 0.9;
-      --translateY: -0.14em;
-    }
-  }
-`;
+const LogoStyles = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Logo__LogoStyles"
+})(["font-size:clamp(1px,0.65vw,8px);width:30em;height:30em;box-shadow:0 0 10px rgba(0,0,0,0.05);margin:0;--borderSize:1em;background:white url(", ");background-size:150em;border:var(--borderSize) solid white;display:flex;.inner{margin:var(--borderSize);flex:1;background:white;display:grid;grid-template-rows:20% 1fr 1fr;align-content:center;}.est{font-size:1.5em;align-self:center;}h1{display:grid;grid-template-rows:8fr 2fr;align-items:center;margin:0;grid-row:2 / span 2;grid-gap:2em;transform:translateY(-0.7em);}.slices{font-size:3.2em;letter-spacing:0.2em;transform:translateY(-0.15em);}.slicks{transform:scale(1.4);display:block;text-shadow:0.18em 0.18em 0 rgba(0,0,0,0.05);perspective:100px;}.letter{font-size:5em;color:var(--red);--scale:1;--rotate:-10deg;--translateX:0;--translateY:0;--rotateX:0deg;transform:scale(var(--scale)) rotate(var(--rotate)) translateX(var(--translateX)) translateY(var(--translateY)) rotateX(var(--rotateX));display:inline-block;line-height:1;transition:transform 0.3s;&.S{--translateX:-0.05;}&.l{--rotate:2deg;--scale:1.4;--translateX:0.05em;--translateY:-0.05em;}&.i{--scale:0.9;--translateY:-0.1em;--translateX:0.1em;}&.c{--rotate:3deg;--scale:0.9;--translateX:0.1em;--translateY:0.23em;}&.k{--rotate:-12deg;--scale:1.2;--translateX:0.06em;}&.apos{--translateX:0.1em;}&.s{--rotate:12deg;--scale:0.9;--translateY:-0.14em;}}"], _assets_images_stripes_svg__WEBPACK_IMPORTED_MODULE_2___default.a);
 function Logo() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LogoStyles, {
     className: "logo"
@@ -31580,55 +31576,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav`
-  margin-bottom: 3rem;
-
-  .logo {
-    transform: translateY(-50%);
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr auto 1fr 1fr;
-    grid-gap: 2rem;
-    align-item: center;
-  }
-
-  li {
-    --rotate: -2deg;
-    transform: rotate(var(--rotate));
-    order: 1;
-    &:nth-child(1) {
-      --rotate: 1deg;
-    }
-    &:nth-child(2) {
-      --rotate: -2.5deg;
-    }
-    &:nth-child(4) {
-      --rotate: 2.5deg;
-    }
-    &:hover {
-      --rotate: 3deg;
-    }
-  }
-
-  a {
-    font-size: 3rem;
-    text-decoration: none;
-    &:hover {
-      color: var(--red);
-    }
-    /*
-    &[aria-current='page'] {
-      color: var(--red);
-    }
-    */
-  }
-`;
+const NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav.withConfig({
+  displayName: "Nav__NavStyles"
+})(["margin-bottom:3rem;.logo{transform:translateY(-50%);}ul{margin:0;padding:0;text-align:center;list-style:none;display:grid;grid-template-columns:1fr 1fr auto 1fr 1fr;grid-gap:2rem;align-item:center;}li{--rotate:-2deg;transform:rotate(var(--rotate));order:1;&:nth-child(1){--rotate:1deg;}&:nth-child(2){--rotate:-2.5deg;}&:nth-child(4){--rotate:2.5deg;}&:hover{--rotate:3deg;}}a{font-size:3rem;text-decoration:none;&:hover{color:var(--red);}}"]);
 function Nav() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavStyles, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/hotnow"
@@ -31662,72 +31612,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const GlobalStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalStyle"]`
-  :root {
-    --red: #FF4949;
-    --black: #2E2E2E;
-    --yellow: #ffc600;
-    --white: #fff;
-    --grey: #efefef;
-  }
-  html {
-    background-image: url(${_assets_images_bg_svg__WEBPACK_IMPORTED_MODULE_1___default.a});
-    background-size: 450px;
-    background-attachment: fixed;
-    font-size: 10px;
-  }
-  body {
-    font-size: 2rem;
-  }
-  fieldset {
-    border-color: rgba(0,0,0,0.1);
-    border-width: 1px;
-  }
-  button {
-    background: var(--red);
-    color: white;
-    border: 0;
-    padding: 0.6rem 1rem;
-    border-radius: 2px;
-    cursor: pointer;
-    --cast: 2px;
-    box-shadow: var(--cast) var(--cast) 0 var(--grey);
-    text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.2);
-    transition: all 0.2s;
-    &:hover {
-      --cast: 4px;
-    }
-  }
-  .gatsby-image-wrapper img[src*=base64\\,] {
-    image-rendering: -moz-crisp-edges;
-    image-rendering: pixelated;
-  }
-  /* Scrollbar Styles */
-  body::-webkit-scrollbar {
-    width: 12px;
-  }
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--red) var(--white);
-  }
-  body::-webkit-scrollbar-track {
-    background: var(--white);
-  }
-  body::-webkit-scrollbar-thumb {
-    background-color: var(--red) ;
-    border-radius: 6px;
-    border: 3px solid var(--white);
-  }
-  hr {
-    border: 0;
-    height: 8px;
-    background-image: url(${_assets_images_stripes_svg__WEBPACK_IMPORTED_MODULE_2___default.a});
-    background-size: 1500px;
-  }
-  img {
-    max-width: 100%;
-  }
-`;
+const GlobalStyles = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalStyle"])([":root{--red:#FF4949;--black:#2E2E2E;--yellow:#ffc600;--white:#fff;--grey:#efefef;}html{background-image:url(", ");background-size:450px;background-attachment:fixed;font-size:10px;}body{font-size:2rem;}fieldset{border-color:rgba(0,0,0,0.1);border-width:1px;}button{background:var(--red);color:white;border:0;padding:0.6rem 1rem;border-radius:2px;cursor:pointer;--cast:2px;box-shadow:var(--cast) var(--cast) 0 var(--grey);text-shadow:0.5px 0.5px 0 rgba(0,0,0,0.2);transition:all 0.2s;&:hover{--cast:4px;}}.gatsby-image-wrapper img[src*=base64\\,]{image-rendering:-moz-crisp-edges;image-rendering:pixelated;}body::-webkit-scrollbar{width:12px;}html{scrollbar-width:thin;scrollbar-color:var(--red) var(--white);}body::-webkit-scrollbar-track{background:var(--white);}body::-webkit-scrollbar-thumb{background-color:var(--red);border-radius:6px;border:3px solid var(--white);}hr{border:0;height:8px;background-image:url(", ");background-size:1500px;}img{max-width:100%;}"], _assets_images_bg_svg__WEBPACK_IMPORTED_MODULE_1___default.a, _assets_images_stripes_svg__WEBPACK_IMPORTED_MODULE_2___default.a);
 /* harmony default export */ __webpack_exports__["default"] = (GlobalStyles);
 
 /***/ }),
@@ -31746,50 +31631,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_fonts_frenchfries_woff__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_fonts_frenchfries_woff__WEBPACK_IMPORTED_MODULE_1__);
 
 
-const Typography = styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalStyle"]`
-  @font-face {
-    font-family: FrenchFries;
-    src: url(${_assets_fonts_frenchfries_woff__WEBPACK_IMPORTED_MODULE_1___default.a});
-  }
-  html {
-    font-family: FrenchFries, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--black);
-  }
-  p, li {
-    letter-spacing: 0.5px;
-  }
-  h1,h2,h3,h4,h5,h6 {
-    font-weight: normal;
-    margin: 0;
-  }
-  a {
-    color: var(--black);
-    text-decoration-color: var(--red);
-    /* Chrome renders this weird with this font, so we turn it off */
-    text-decoration-skip-ink: none;
-  }
-  mark, .mark {
-    background: var(--yellow);
-    padding: 0 2px 2px 2px;
-    margin: 0;
-    display: inline;
-    line-height: 1;
-  }
-  .center {
-    text-align: center;
-  }
-  .tilt {
-    transform: rotate(-2deg);
-  }
-`;
+const Typography = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalStyle"])(["@font-face{font-family:FrenchFries;src:url(", ");}html{font-family:FrenchFries,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;color:var(--black);}p,li{letter-spacing:0.5px;}h1,h2,h3,h4,h5,h6{font-weight:normal;margin:0;}a{color:var(--black);text-decoration-color:var(--red);text-decoration-skip-ink:none;}mark,.mark{background:var(--yellow);padding:0 2px 2px 2px;margin:0;display:inline;line-height:1;}.center{text-align:center;}.tilt{transform:rotate(-2deg);}"], _assets_fonts_frenchfries_woff__WEBPACK_IMPORTED_MODULE_1___default.a);
 /* harmony default export */ __webpack_exports__["default"] = (Typography);
 
 /***/ }),
 
 /***/ "@reach/router":
-/*!************************************************************************************************!*\
-  !*** external "/home/mala23/projects/slicksslices/gatsby/node_modules/@reach/router/index.js" ***!
-  \************************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** external "/Users/mala23/Projects/slicksslices/gatsby/node_modules/@reach/router/index.js" ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -31798,9 +31648,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__reach_router__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!*****************************************************************************************!*\
-  !*** external "/home/mala23/projects/slicksslices/gatsby/node_modules/lodash/merge.js" ***!
-  \*****************************************************************************************/
+/*!******************************************************************************************!*\
+  !*** external "/Users/mala23/Projects/slicksslices/gatsby/node_modules/lodash/merge.js" ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
